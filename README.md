@@ -2,6 +2,8 @@
 
 WIP
 
+![Top-image](https://github.com/ryota2357/necodark/blob/images/top.png)
+
 ## Installation
 
 ### vim
