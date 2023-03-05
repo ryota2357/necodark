@@ -1,0 +1,44 @@
+name: Build
+
+on:
+  push:
+
+env:
+  DOTNET_VERSION: '7.x'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Install dependencies
+        run: dotnet restore
+        working-directory: ./src/Necodark
+
+      - name: Build
+        run: make
+
+      - name: Publish vim
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: vim
+          FOLDER: build/vim
+          SKIP_EMPTY_COMMITS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish nvim
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: nvim
+          FOLDER: build/nvim
+          SKIP_EMPTY_COMMITS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
