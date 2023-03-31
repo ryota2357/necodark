@@ -1,7 +1,7 @@
 " Name:        necodark
 " Version:     1.0.0
 " Author:      ryota2357
-" Last change: 2023-03-05 Sunday
+" Last change: 2023-03-31 Friday
 set background=dark
 highlight clear
 if exists('syntax_on')
@@ -30,13 +30,15 @@ hi NotifyTRACETitle guifg=#8a99ff
 hi IlluminatedWordText guifg=NONE guibg=#393c43
 hi IlluminatedWordRead guifg=NONE guibg=#393c43
 hi IlluminatedWordWrite guifg=NONE guibg=#393c43
+hi FidgetTitle cterm=bold guifg=#1687bc guibg=NONE gui=bold
+hi FidgetTask cterm=NONE guifg=#5c6370 guibg=NONE gui=NONE
 hi Comment guifg=#5c6370
 hi Constant cterm=NONE guifg=#edeef2 guibg=#1a1b1f gui=NONE
 hi String guifg=#e88e73
 hi Character guifg=#e88e73
 hi Number guifg=#fb749c
 hi Boolean guifg=#4dcbbb
-hi Float guifg=#4dcbbb
+hi Float guifg=#fb749c
 hi Identifier guifg=#9fe7ff
 hi Function guifg=#ffe8a3
 hi Statement guifg=#8a99ff
