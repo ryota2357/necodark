@@ -1,7 +1,7 @@
 -- Name:        necodark
 -- Version:     1.0.0
 -- Author:      ryota2357
--- Last change: 2023-03-05 Sunday
+-- Last change: 2023-03-31 Friday
 vim.cmd [[
   set background=dark
   highlight clear
@@ -32,6 +32,8 @@ vim.api.nvim_set_hl(0, 'NotifyTRACETitle', { fg = '#8a99ff' })
 vim.api.nvim_set_hl(0, 'IlluminatedWordText', { fg = 'NONE', bg = '#393c43' })
 vim.api.nvim_set_hl(0, 'IlluminatedWordRead', { fg = 'NONE', bg = '#393c43' })
 vim.api.nvim_set_hl(0, 'IlluminatedWordWrite', { fg = 'NONE', bg = '#393c43' })
+vim.api.nvim_set_hl(0, 'FidgetTitle', { fg = '#1687bc', bg = 'NONE', bold = true, cterm = { bold = true } })
+vim.api.nvim_set_hl(0, 'FidgetTask', { fg = '#5c6370', bg = 'NONE', cterm = {} })
 vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = '#ff3129' })
 vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = '#fccd2c' })
 vim.api.nvim_set_hl(0, 'DiagnosticInfo', { fg = '#14b5ff' })
@@ -50,7 +52,7 @@ vim.api.nvim_set_hl(0, 'String', { fg = '#e88e73' })
 vim.api.nvim_set_hl(0, 'Character', { fg = '#e88e73' })
 vim.api.nvim_set_hl(0, 'Number', { fg = '#fb749c' })
 vim.api.nvim_set_hl(0, 'Boolean', { fg = '#4dcbbb' })
-vim.api.nvim_set_hl(0, 'Float', { fg = '#4dcbbb' })
+vim.api.nvim_set_hl(0, 'Float', { fg = '#fb749c' })
 vim.api.nvim_set_hl(0, 'Identifier', { fg = '#9fe7ff' })
 vim.api.nvim_set_hl(0, 'Function', { fg = '#ffe8a3' })
 vim.api.nvim_set_hl(0, 'Statement', { fg = '#8a99ff' })
