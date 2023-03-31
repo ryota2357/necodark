@@ -1,5 +1,3 @@
-using Sccg;
-
 namespace Necodark;
 
 public static class C

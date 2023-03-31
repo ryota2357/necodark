@@ -16,7 +16,7 @@ public class VimSyntaxHighlight : VimSyntaxGroupSource
                 Group.Character => S.StringLiteralOrange,
                 Group.Number => S.NumberLiteralPink,
                 Group.Boolean => S.BooleanLiteralTeal,
-                Group.Float => S.BooleanLiteralTeal,
+                Group.Float => S.NumberLiteralPink,
                 Group.Identifier => S.VariableLightCyan,
                 Group.Function => S.FunctionAmber,
                 Group.Statement => S.StatementIndigo,
