@@ -37,7 +37,7 @@ public class NeovimPluginHighlight : VimCustomGroupSource
         Set("IlluminatedWordWrite", illuminated);
 
         // j-hui/fidget.nvim
-        Set("FidgetTitle", fg: Color.AlphaBlend(C.InfoBlue, S.NormalText.Background, 0.9f), bg: Color.None, bold: true);
+        Set("FidgetTitle", fg: Color.AlphaBlend(C.InfoBlue, S.NormalText.Background, 0.7f), bg: Color.None, bold: true);
         Set("FidgetTask", fg: S.CommentGray.Foreground, bg: Color.None, none: true);
     }
 }
