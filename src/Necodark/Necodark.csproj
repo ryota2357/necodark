@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sccg" Version="0.1.0" />
-    <PackageReference Include="Sccg.Builtin" Version="0.1.0" />
+    <PackageReference Include="Sccg" Version="0.2.1" />
+    <PackageReference Include="Sccg.Builtin" Version="0.2.2" />
   </ItemGroup>
 
 </Project>

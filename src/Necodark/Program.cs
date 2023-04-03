@@ -8,7 +8,10 @@ var builder = new Builder
     Metadata = Metadata.Default with
     {
         ThemeName = "necodark",
-        Author = "ryota2357"
+        Author = "ryota2357",
+        Version = "0.1.0",
+        License = "MIT",
+        Repository = "https://github.com/ryota2357/necodark.git",
     },
     // LogLevel = LogLevel.Debug
 };
