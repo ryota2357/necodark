@@ -1,7 +1,9 @@
 -- Name:        necodark
--- Version:     1.0.0
+-- Version:     0.1.0
 -- Author:      ryota2357
--- Last change: 2023-03-31 Friday
+-- License:     MIT
+-- Repository:  https://github.com/ryota2357/necodark.git
+-- Last change: 2023-04-03 Monday
 vim.cmd [[
   set background=dark
   highlight clear
@@ -169,4 +171,4 @@ vim.api.nvim_set_hl(0, '@text.diff.add', { fg = '#3db34d', cterm = {} })
 vim.api.nvim_set_hl(0, '@text.diff.delete', { fg = '#db403d', cterm = {} })
 vim.api.nvim_set_hl(0, '@tag', { fg = '#379df1' })
 vim.api.nvim_set_hl(0, '@tag.delimiter', { fg = '#5c6370' })
--- Built with Sccg 0.0.1
+-- Built with Sccg 0.2.1
