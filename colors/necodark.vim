@@ -1,7 +1,9 @@
 " Name:        necodark
-" Version:     1.0.0
+" Version:     0.1.0
 " Author:      ryota2357
-" Last change: 2023-03-31 Friday
+" License:     MIT
+" Repository:  https://github.com/ryota2357/necodark.git
+" Last change: 2023-04-03 Monday
 set background=dark
 highlight clear
 if exists('syntax_on')
@@ -111,4 +113,4 @@ hi Title cterm=bold guifg=#e88e73 gui=bold
 hi Visual cterm=NONE guifg=NONE guibg=#334870 gui=NONE
 hi VisualNOS cterm=NONE guifg=NONE guibg=#334870 gui=NONE
 hi WarningMsg cterm=NONE guifg=#fccd2c guibg=NONE gui=NONE
-" Built with Sccg 0.0.1
+" Built with Sccg 0.2.1
