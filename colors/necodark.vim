@@ -11,29 +11,6 @@ if exists('syntax_on')
 endif
 set t_Co=256
 let g:colors_name = 'necodark'
-hi GitSignsAdd cterm=NONE guifg=#3db34d gui=NONE
-hi GitSignsChange cterm=NONE guifg=#d29922 gui=NONE
-hi GitSignsDelete cterm=NONE guifg=#db403d gui=NONE
-hi NotifyERRORBorder cterm=NONE guifg=#8c2624 gui=NONE
-hi NotifyWARNBorder cterm=NONE guifg=#806b25 gui=NONE
-hi NotifyINFOBorder cterm=NONE guifg=#17688f gui=NONE
-hi NotifyDEBUGBorder cterm=NONE guifg=#555c68 gui=NONE
-hi NotifyTRACEBorder cterm=NONE guifg=#525a8f gui=NONE
-hi NotifyERRORIcon cterm=NONE guifg=#ff3129 gui=NONE
-hi NotifyWARNIcon cterm=NONE guifg=#fccd2c gui=NONE
-hi NotifyINFOIcon cterm=NONE guifg=#14b5ff gui=NONE
-hi NotifyDEBUGIcon cterm=NONE guifg=#5c6370 gui=NONE
-hi NotifyTRACEIcon cterm=NONE guifg=#8a99ff gui=NONE
-hi NotifyERRORTitle guifg=#ff3129
-hi NotifyWARNTitle guifg=#fccd2c
-hi NotifyINFOTitle guifg=#14b5ff
-hi NotifyDEBUGTitle guifg=#5c6370
-hi NotifyTRACETitle guifg=#8a99ff
-hi IlluminatedWordText guifg=NONE guibg=#393c43
-hi IlluminatedWordRead guifg=NONE guibg=#393c43
-hi IlluminatedWordWrite guifg=NONE guibg=#393c43
-hi FidgetTitle cterm=bold guifg=#1687bc guibg=NONE gui=bold
-hi FidgetTask cterm=NONE guifg=#5c6370 guibg=NONE gui=NONE
 hi Comment guifg=#5c6370
 hi Constant cterm=NONE guifg=#edeef2 guibg=#1a1b1f gui=NONE
 hi String guifg=#e88e73
@@ -68,6 +45,29 @@ hi Debug cterm=NONE guifg=#edeef2 guibg=#1a1b1f gui=NONE
 hi Underlined cterm=underline guifg=#edeef2 guibg=#1a1b1f gui=underline
 hi Error cterm=NONE guifg=#ff3129 guibg=NONE gui=NONE
 hi Todo cterm=NONE guifg=#fccd2c guibg=NONE gui=NONE
+hi GitSignsAdd cterm=NONE guifg=#3db34d gui=NONE
+hi GitSignsChange cterm=NONE guifg=#d29922 gui=NONE
+hi GitSignsDelete cterm=NONE guifg=#db403d gui=NONE
+hi NotifyERRORBorder cterm=NONE guifg=#8c2624 gui=NONE
+hi NotifyWARNBorder cterm=NONE guifg=#806b25 gui=NONE
+hi NotifyINFOBorder cterm=NONE guifg=#17688f gui=NONE
+hi NotifyDEBUGBorder cterm=NONE guifg=#555c68 gui=NONE
+hi NotifyTRACEBorder cterm=NONE guifg=#525a8f gui=NONE
+hi NotifyERRORIcon cterm=NONE guifg=#ff3129 gui=NONE
+hi NotifyWARNIcon cterm=NONE guifg=#fccd2c gui=NONE
+hi NotifyINFOIcon cterm=NONE guifg=#14b5ff gui=NONE
+hi NotifyDEBUGIcon cterm=NONE guifg=#5c6370 gui=NONE
+hi NotifyTRACEIcon cterm=NONE guifg=#8a99ff gui=NONE
+hi NotifyERRORTitle guifg=#ff3129
+hi NotifyWARNTitle guifg=#fccd2c
+hi NotifyINFOTitle guifg=#14b5ff
+hi NotifyDEBUGTitle guifg=#5c6370
+hi NotifyTRACETitle guifg=#8a99ff
+hi IlluminatedWordText guifg=NONE guibg=#393c43
+hi IlluminatedWordRead guifg=NONE guibg=#393c43
+hi IlluminatedWordWrite guifg=NONE guibg=#393c43
+hi FidgetTitle cterm=bold guifg=#1687bc guibg=NONE gui=bold
+hi FidgetTask cterm=NONE guifg=#5c6370 guibg=NONE gui=NONE
 hi diffAdded cterm=NONE guifg=#3db34d gui=NONE
 hi diffRemoved cterm=NONE guifg=#db403d gui=NONE
 hi diffChanged cterm=NONE guifg=#d29922 gui=NONE
