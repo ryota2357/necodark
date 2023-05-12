@@ -1,5 +1,5 @@
 " Name:        necodark
-" Version:     0.1.0
+" Version:     0.1.1
 " Author:      ryota2357
 " License:     MIT
 " Repository:  https://github.com/ryota2357/necodark.git
@@ -87,13 +87,17 @@ hi DiffChange guibg=#3f3420
 hi DiffDelete guibg=#412225
 hi DiffText guibg=#644d20
 hi EndOfBuffer cterm=NONE guifg=#39393f guibg=NONE gui=NONE
-hi ErrorMsg guifg=#ff3129
+hi ErrorMsg guifg=#ff3129 guibg=NONE
 hi Folded cterm=bold guifg=#5c6370 gui=bold
 " hi FoldColumn
 hi SignColumn guifg=#edeef2 guibg=NONE
 hi IncSearch guifg=#1a1b1f guibg=#4dcbbb
 hi LineNr guifg=#5c6370
+" hi LineNrAbove
+" hi LineNrBelow
 hi CursorLineNr cterm=NONE guifg=#edeef2 guibg=#1a1b1f gui=NONE
+" hi CursorLineFold
+" hi CursorLineSign
 hi MatchParen cterm=NONE guifg=NONE guibg=#525760 gui=NONE
 hi ModeMsg cterm=italic guifg=#5c6370 gui=italic
 hi MoreMsg cterm=bold guifg=#5c6370 gui=bold
@@ -101,9 +105,17 @@ hi NonText cterm=NONE guifg=#39393f guibg=NONE gui=NONE
 hi Normal cterm=NONE guifg=#edeef2 guibg=#1a1b1f gui=NONE
 hi Pmenu cterm=NONE guifg=#edeef2 guibg=#27292f gui=NONE
 hi PmenuSel cterm=NONE guifg=NONE guibg=#525760 gui=NONE
+" hi PmenuSbar
+" hi PmenuThumb
+" hi Question
+" hi QuickFixLine
 hi Search cterm=NONE guifg=NONE guibg=#334870 gui=NONE
 hi CurSearch guifg=#1a1b1f guibg=#4dcbbb
 hi SpecialKey cterm=NONE guifg=#39393f guibg=NONE gui=NONE
+hi SpellBad cterm=undercurl guibg=NONE guisp=#ff3129 gui=undercurl
+hi SpellCap cterm=undercurl guibg=NONE guisp=#fccd2c gui=undercurl
+hi SpellLocal cterm=undercurl guibg=NONE guisp=#14b5ff gui=undercurl
+hi SpellRare cterm=undercurl guibg=NONE guisp=#14b5ff gui=undercurl
 hi StatusLine cterm=NONE guifg=#edeef2 guibg=#525760 gui=NONE
 hi StatusLineNC cterm=NONE guifg=#edeef2 guibg=#1a1b1f gui=NONE
 hi TabLine guifg=#5c6370
@@ -113,4 +125,8 @@ hi Title cterm=bold guifg=#e88e73 gui=bold
 hi Visual cterm=NONE guifg=NONE guibg=#334870 gui=NONE
 hi VisualNOS cterm=NONE guifg=NONE guibg=#334870 gui=NONE
 hi WarningMsg cterm=NONE guifg=#fccd2c guibg=NONE gui=NONE
+" hi WildMenu
+" hi Menu
+" hi Scrollbar
+" hi Tooltip
 " Built with Sccg 0.2.1
