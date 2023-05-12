@@ -1,0 +1,26 @@
+{
+  "name": "necodark",
+  "displayName": "necodark for VS Code",
+  "version": "0.1.1",
+  "publisher": "ryota2357",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryota2357/necodark.git"
+  },
+  "engines": {
+    "vscode": "*"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "necodark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/necodark-color-theme.json"
+      }
+    ]
+  }
+}

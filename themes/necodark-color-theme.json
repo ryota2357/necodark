@@ -1,0 +1,118 @@
+{
+  "name": "necodark for VS Code",
+  "type": "dark",
+  "colors": {
+    "foreground": "#edeef2",
+    "sideBar.background": "#000000",
+    "statusBar.background": "#525760"
+  },
+  "tokenColors": [
+    {
+      "scope": [
+        "comment",
+        "comment.line",
+        "comment.line.double-slash",
+        "comment.line.double-dash",
+        "comment.line.number-sign",
+        "comment.line.percentage",
+        "comment.line.character",
+        "comment.block"
+      ],
+      "settings": {
+        "foreground": "#5c6370"
+      }
+    },
+    {
+      "scope": [
+        "constant",
+        "constant.language",
+        "constant.other",
+        "entity",
+        "entity.name",
+        "meta",
+        "support"
+      ],
+      "settings": {
+        "foreground": "#edeef2"
+      }
+    },
+    {
+      "scope": "constant.numeric",
+      "settings": {
+        "foreground": "#fb749c"
+      }
+    },
+    {
+      "scope": [
+        "constant.character",
+        "constant.character.escape",
+        "string",
+        "string.quoted",
+        "string.quoted.single",
+        "string.quoted.double",
+        "string.quoted.triple",
+        "string.quoted.other"
+      ],
+      "settings": {
+        "foreground": "#e88e73"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function",
+        "entity.other.attribute-name",
+        "support.function"
+      ],
+      "settings": {
+        "foreground": "#ffe8a3"
+      }
+    },
+    {
+      "scope": "entity.name.type",
+      "settings": {
+        "foreground": "#4bbe75"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.tag",
+        "keyword",
+        "keyword.other",
+        "storage",
+        "storage.type",
+        "storage.modifier",
+        "support.class",
+        "support.type",
+        "support.constant",
+        "support.variable"
+      ],
+      "settings": {
+        "foreground": "#379df1"
+      }
+    },
+    {
+      "scope": [
+        "entity.name.section",
+        "keyword.control"
+      ],
+      "settings": {
+        "foreground": "#8a99ff"
+      }
+    },
+    {
+      "scope": "keyword.operator",
+      "settings": {
+        "foreground": "#cdd3d6"
+      }
+    },
+    {
+      "scope": [
+        "variable",
+        "variable.parameter"
+      ],
+      "settings": {
+        "foreground": "#9fe7ff"
+      }
+    }
+  ]
+}
