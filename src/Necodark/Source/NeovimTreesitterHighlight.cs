@@ -10,6 +10,8 @@ public class NeovimTreesitterHighlight : NeovimTreesitterHighlightSource
 
     protected override void Custom(BuilderQuery query)
     {
+        EnableVimSyntaxLink(query);
+
         // Misc
         Link(Group.Comment, VimSyntax.Comment);
         // @comment.documentation ; comments documenting code
@@ -66,7 +68,7 @@ public class NeovimTreesitterHighlight : NeovimTreesitterHighlightSource
         Set(Group.TypeBuiltin, S.KeywordBlue);
         Link(Group.TypeQualifier, Group.TypeBuiltin);
         Link(Group.Storageclass, Group.TypeBuiltin);
-        // @attribute       ; attribute annotations (e.g. Python decorators)
+        Set(Group.Attribute, S.FunctionAmber);
         Set(Group.Field, S.VariableLightCyan);
         Set(Group.Property, S.VariableLightCyan);
 
