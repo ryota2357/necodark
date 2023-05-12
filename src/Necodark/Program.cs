@@ -2,6 +2,7 @@
 using Sccg.Builtin.Writers;
 using Necodark.Converter;
 using Necodark.Source;
+using Sccg.Builtin.Converters;
 
 var builder = new Builder
 {
@@ -12,6 +13,10 @@ var builder = new Builder
         Version = "0.1.1",
         License = "MIT",
         Repository = "https://github.com/ryota2357/necodark.git",
+        Context = new MetadataContext
+        {
+            {"vscode.displayName", "necodark for VS Code"},
+        }
     },
     // LogLevel = LogLevel.Debug
 };
@@ -25,13 +30,17 @@ builder.Use<NeovimEditorHighlight>();
 builder.Use<NeovimTreesitterHighlight>();
 builder.Use<NeovimLspDiagnosticHighlight>();
 builder.Use<NeovimPluginHighlight>();
+builder.Use<VSCodeEditorHightlight>();
+builder.Use<TextMateHighlight>();
 
 // formatter
 builder.Use<VimFormatter>();
 builder.Use<NeovimFormatter>();
+builder.Use<VSCodeFormatter>();
 
 // converter
 builder.Use<FilenameConverter>();
+builder.Use<MultiTextContentSplitter>();
 
 // writer
 builder.Use<TextFileWriter>();

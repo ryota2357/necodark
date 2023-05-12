@@ -18,8 +18,15 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+
       - name: Install dependencies
-        run: dotnet restore
+        run: |
+          dotnet restore
+          npm install -g @vscode/vsce
         working-directory: ./src/Necodark
 
       - name: Build
@@ -40,5 +47,14 @@ jobs:
           REPO: self
           BRANCH: build/nvim
           FOLDER: build/nvim
+          SKIP_EMPTY_COMMITS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish vscode
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: build/vscode
+          FOLDER: build/vscode
           SKIP_EMPTY_COMMITS: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
