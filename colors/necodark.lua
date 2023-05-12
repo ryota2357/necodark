@@ -3,7 +3,7 @@
 -- Author:      ryota2357
 -- License:     MIT
 -- Repository:  https://github.com/ryota2357/necodark.git
--- Last change: 2023-04-03 Monday
+-- Last change: 2023-05-12 Friday
 vim.cmd [[
   set background=dark
   highlight clear
