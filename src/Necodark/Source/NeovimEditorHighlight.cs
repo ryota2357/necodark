@@ -33,7 +33,7 @@ public class NeovimEditorHighlight : NeovimEditorHighlightSource
         // TermCursor
         // TermCursorNC
 
-        Set(Group.ErrorMsg, fg: C.ErrorRed);
+        Set(Group.ErrorMsg, fg: C.ErrorRed, bg: Color.None);
 
         Set(Group.WinSeparator, fg: "000", bg: Color.None);
 
@@ -80,10 +80,10 @@ public class NeovimEditorHighlight : NeovimEditorHighlightSource
 
         Set(Group.SpecialKey, S.CommentGray with { Bold = true });
 
-        // SpellBad
-        // SpellCap
-        // SpellLocal
-        // SpellRare
+        Set(Group.SpellBad, sp: C.ErrorRed, underlineWaved: true);
+        Set(Group.SpellCap, sp: C.WarnYellow, underlineWaved: true);
+        Set(Group.SpellLocal, sp: C.InfoBlue, underlineWaved: true);
+        Set(Group.SpellRare, sp: C.InfoBlue, underlineWaved: true);
 
         Set(Group.StatusLine, S.NormalText with { Background = S.SelectRangeWhite.Background });
         Set(Group.StatusLineNC, S.NormalText);
@@ -97,7 +97,7 @@ public class NeovimEditorHighlight : NeovimEditorHighlightSource
         Set(Group.Visual, S.SelectRangeBlue);
         Link(Group.VisualNOS, Group.Visual);
 
-        Set(Group.WarningMsg, new Style(fg: C.WarnYellow, bg: Color.None, none: true));
+        Set(Group.WarningMsg, fg: C.WarnYellow, bg: Color.None, none: true);
 
         Set(Group.Whitespace, S.HideText);
 

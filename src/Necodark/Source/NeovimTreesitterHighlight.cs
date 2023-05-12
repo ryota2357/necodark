@@ -12,6 +12,7 @@ public class NeovimTreesitterHighlight : NeovimTreesitterHighlightSource
     {
         // Misc
         Link(Group.Comment, VimSyntax.Comment);
+        // @comment.documentation ; comments documenting code
         Link(Group.Error, VimSyntax.Error);
         Set(Group.None, fg: Color.None, bg: Color.None, sp: Color.None, none: true);
         Link(Group.Preproc, VimSyntax.PreProc);
@@ -25,11 +26,12 @@ public class NeovimTreesitterHighlight : NeovimTreesitterHighlightSource
 
         // Literals
         Set(Group.String, S.StringLiteralOrange);
-        // @string.regex      ; regular expressions
-        // @string.escape     ; escape sequences
-        // @string.special    ; other special strings (e.g. dates)
-        // @character         ; character literals
-        // @character.special ; special characters (e.g. wildcards)
+        // @string.documentation ; string documenting code (e.g. Python docstrings)
+        // @string.regex         ; regular expressions
+        // @string.escape        ; escape sequences
+        // @string.special       ; other special strings (e.g. dates)
+        Set(Group.Character, S.StringLiteralOrange);
+        // @character.special    ; special characters (e.g. wildcards)
         Link(Group.Boolean, VimSyntax.Boolean);
         Link(Group.Number, VimSyntax.Number);
         Link(Group.Float, VimSyntax.Float);
@@ -69,13 +71,12 @@ public class NeovimTreesitterHighlight : NeovimTreesitterHighlightSource
         Set(Group.Property, S.VariableLightCyan);
 
         // Identifiers
-        // @variable         ; various variable names
         Set(Group.Variable, S.VariableLightCyan);
         Set(Group.VariableBuiltin, S.KeywordBlue);
-        // @constant         ; constant identifiers
-        // @constant.builtin ; built-in constant values
-        // @constant.macro   ; constants defined by the preprocessor
-        // @namespace        ; modules or namespaces
+        Set(Group.Constant, S.NormalText);
+        Set(Group.ConstantBuiltin, S.KeywordBlue);
+        Set(Group.ConstantMacro, S.FunctionAmber);
+        Set(Group.Namespace, S.NormalText);
         // @symbol           ; symbols or atoms
 
         // Text

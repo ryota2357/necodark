@@ -20,83 +20,84 @@ public class VimEditorHighlight : VimEditorHighlightSource
             }
         }
 
+        Style H(NvimGroup group)
+        {
+            return styleMap.TryGetValue(group, out var style) ? style : Style.Default;
+        }
+
         foreach (var group in Enum.GetValues<Group>())
         {
-            NvimGroup? nvimGroup = group switch
+            Style? style = group switch
             {
-                Group.ColorColumn => NvimGroup.ColorColumn,
-                Group.Conceal => NvimGroup.Conceal,
-                Group.Cursor => NvimGroup.Cursor,
-                Group.lCursor => NvimGroup.lCursor,
-                Group.CursorIM => NvimGroup.CursorIM,
-                Group.CursorColumn => NvimGroup.CursorColumn,
-                Group.CursorLine => NvimGroup.CursorLine,
-                Group.Directory => NvimGroup.Directory,
-                Group.DiffAdd => NvimGroup.DiffAdd,
-                Group.DiffChange => NvimGroup.DiffChange,
-                Group.DiffDelete => NvimGroup.DiffDelete,
-                Group.DiffText => NvimGroup.DiffText,
-                Group.EndOfBuffer => NvimGroup.EndOfBuffer,
-                Group.ErrorMsg => NvimGroup.ErrorMsg,
+                Group.ColorColumn => H(NvimGroup.ColorColumn),
+                Group.Conceal => H(NvimGroup.Conceal),
+                Group.Cursor => H(NvimGroup.Cursor),
+                Group.lCursor => H(NvimGroup.lCursor),
+                Group.CursorIM => H(NvimGroup.CursorIM),
+                Group.CursorColumn => H(NvimGroup.CursorColumn),
+                Group.CursorLine => H(NvimGroup.CursorLine),
+                Group.Directory => H(NvimGroup.Directory),
+                Group.DiffAdd => H(NvimGroup.DiffAdd),
+                Group.DiffChange => H(NvimGroup.DiffChange),
+                Group.DiffDelete => H(NvimGroup.DiffDelete),
+                Group.DiffText => H(NvimGroup.DiffText),
+                Group.EndOfBuffer => H(NvimGroup.EndOfBuffer),
+                Group.ErrorMsg => H(NvimGroup.ErrorMsg),
                 Group.VertSplit => null,
-                Group.Folded => NvimGroup.Folded,
-                Group.FoldColumn => NvimGroup.FoldColumn,
-                Group.SignColumn => NvimGroup.SignColumn,
-                Group.IncSearch => NvimGroup.IncSearch,
-                Group.LineNr => NvimGroup.LineNr,
-                Group.LineNrAbove => NvimGroup.LineNrAbove,
-                Group.LineNrBelow => NvimGroup.LineNrBelow,
-                Group.CursorLineNr => NvimGroup.CursorLineNr,
-                Group.CursorLineFold => NvimGroup.CursorLineFold,
-                Group.CursorLineSign => NvimGroup.CursorLineSign,
-                Group.MatchParen => NvimGroup.MatchParen,
+                Group.Folded => H(NvimGroup.Folded),
+                Group.FoldColumn => H(NvimGroup.FoldColumn),
+                Group.SignColumn => H(NvimGroup.SignColumn),
+                Group.IncSearch => H(NvimGroup.IncSearch),
+                Group.LineNr => H(NvimGroup.LineNr),
+                Group.LineNrAbove => H(NvimGroup.LineNrAbove),
+                Group.LineNrBelow => H(NvimGroup.LineNrBelow),
+                Group.CursorLineNr => H(NvimGroup.CursorLineNr),
+                Group.CursorLineFold => H(NvimGroup.CursorLineFold),
+                Group.CursorLineSign => H(NvimGroup.CursorLineSign),
+                Group.MatchParen => H(NvimGroup.MatchParen),
                 Group.MessageWindow => null,
-                Group.ModeMsg => NvimGroup.ModeMsg,
-                Group.MoreMsg => NvimGroup.MoreMsg,
-                Group.NonText => NvimGroup.NonText,
-                Group.Normal => NvimGroup.Normal,
-                Group.Pmenu => NvimGroup.Pmenu,
-                Group.PmenuSel => NvimGroup.PmenuSel,
-                Group.PmenuSbar => NvimGroup.PmenuSbar,
-                Group.PmenuThumb => NvimGroup.PmenuThumb,
+                Group.ModeMsg => H(NvimGroup.ModeMsg),
+                Group.MoreMsg => H(NvimGroup.MoreMsg),
+                Group.NonText => H(NvimGroup.NonText),
+                Group.Normal => H(NvimGroup.Normal),
+                Group.Pmenu => H(NvimGroup.Pmenu),
+                Group.PmenuSel => H(NvimGroup.PmenuSel),
+                Group.PmenuSbar => H(NvimGroup.PmenuSbar),
+                Group.PmenuThumb => H(NvimGroup.PmenuThumb),
                 Group.PopupNotification => null,
-                Group.Question => NvimGroup.Question,
-                Group.QuickFixLine => NvimGroup.QuickFixLine,
-                Group.Search => NvimGroup.Search,
-                Group.CurSearch => NvimGroup.CurSearch,
-                Group.SpecialKey => NvimGroup.Whitespace,
-                Group.SpellBad => NvimGroup.SpellBad,
-                Group.SpellCap => NvimGroup.SpellCap,
-                Group.SpellLocal => NvimGroup.SpellLocal,
-                Group.SpellRare => NvimGroup.SpellRare,
-                Group.StatusLine => NvimGroup.StatusLine,
-                Group.StatusLineNC => NvimGroup.StatusLineNC,
+                Group.Question => H(NvimGroup.Question),
+                Group.QuickFixLine => H(NvimGroup.QuickFixLine),
+                Group.Search => H(NvimGroup.Search),
+                Group.CurSearch => H(NvimGroup.CurSearch),
+                Group.SpecialKey => H(NvimGroup.Whitespace),
+                Group.SpellBad => H(NvimGroup.SpellBad) with { Background = Color.None },
+                Group.SpellCap => H(NvimGroup.SpellCap) with { Background = Color.None} ,
+                Group.SpellLocal => H(NvimGroup.SpellLocal) with { Background = Color.None },
+                Group.SpellRare => H(NvimGroup.SpellRare) with { Background = Color.None },
+                Group.StatusLine => H(NvimGroup.StatusLine),
+                Group.StatusLineNC => H(NvimGroup.StatusLineNC),
                 Group.StatusLineTerm => null,
                 Group.StatusLineTermNC => null,
-                Group.TabLine => NvimGroup.TabLine,
-                Group.TabLineFill => NvimGroup.TabLineFill,
-                Group.TabLineSel => NvimGroup.TabLineSel,
+                Group.TabLine => H(NvimGroup.TabLine),
+                Group.TabLineFill => H(NvimGroup.TabLineFill),
+                Group.TabLineSel => H(NvimGroup.TabLineSel),
                 Group.Terminal => null,
-                Group.Title => NvimGroup.Title,
-                Group.Visual => NvimGroup.Visual,
-                Group.VisualNOS => NvimGroup.VisualNOS,
-                Group.WarningMsg => NvimGroup.WarningMsg,
-                Group.WildMenu => NvimGroup.WildMenu,
-                Group.Menu => NvimGroup.Menu,
-                Group.Scrollbar => NvimGroup.Scrollbar,
-                Group.Tooltip => NvimGroup.Tooltip,
+                Group.Title => H(NvimGroup.Title),
+                Group.Visual => H(NvimGroup.Visual),
+                Group.VisualNOS => H(NvimGroup.VisualNOS),
+                Group.WarningMsg => H(NvimGroup.WarningMsg),
+                Group.WildMenu => H(NvimGroup.WildMenu),
+                Group.Menu => H(NvimGroup.Menu),
+                Group.Scrollbar => H(NvimGroup.Scrollbar),
+                Group.Tooltip => H(NvimGroup.Tooltip),
                 _ => throw new Exception("not found")
             };
 
-            if (nvimGroup is null)
+            if (style is null)
             {
                 continue;
             }
-
-            if (styleMap.TryGetValue(nvimGroup.Value, out var style))
-            {
-                Set(group, style);
-            }
+            Set(group, style.Value);
         }
     }
 }

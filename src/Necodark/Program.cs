@@ -9,7 +9,7 @@ var builder = new Builder
     {
         ThemeName = "necodark",
         Author = "ryota2357",
-        Version = "0.1.0",
+        Version = "0.1.1",
         License = "MIT",
         Repository = "https://github.com/ryota2357/necodark.git",
     },
