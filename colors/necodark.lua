@@ -1,9 +1,9 @@
 -- Name:        necodark
--- Version:     0.1.1
+-- Version:     0.1.2
 -- Author:      ryota2357
 -- License:     MIT
 -- Repository:  https://github.com/ryota2357/necodark.git
--- Last change: 2023-05-12 Friday
+-- Last change: 2023-06-01 Thursday
 vim.cmd [[
   set background=dark
   highlight clear
@@ -47,6 +47,18 @@ vim.api.nvim_set_hl(0, 'Debug', { fg = '#edeef2', bg = '#1a1b1f', cterm = {} })
 vim.api.nvim_set_hl(0, 'Underlined', { fg = '#edeef2', bg = '#1a1b1f', underline = true, cterm = { underline = true } })
 vim.api.nvim_set_hl(0, 'Error', { fg = '#ff3129', bg = 'NONE', cterm = {} })
 vim.api.nvim_set_hl(0, 'Todo', { fg = '#fccd2c', bg = 'NONE', cterm = {} })
+vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = '#ff3129' })
+vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = '#fccd2c' })
+vim.api.nvim_set_hl(0, 'DiagnosticInfo', { fg = '#14b5ff' })
+vim.api.nvim_set_hl(0, 'DiagnosticHint', { fg = '#72b847' })
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', { fg = '#ff3129', bg = '#3c1e20', italic = true, cterm = { italic = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', { fg = '#fccd2c', bg = '#3c3621', italic = true, cterm = { italic = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', { fg = '#14b5ff', bg = '#193241', italic = true, cterm = { italic = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { fg = '#72b847', bg = '#273325', italic = true, cterm = { italic = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { sp = '#ff3129', undercurl = true, cterm = { undercurl = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { sp = '#fccd2c', undercurl = true, cterm = { undercurl = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { sp = '#14b5ff', undercurl = true, cterm = { undercurl = true } })
+vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { sp = '#72b847', undercurl = true, cterm = { undercurl = true } })
 vim.api.nvim_set_hl(0, 'GitSignsAdd', { fg = '#3db34d', cterm = {} })
 vim.api.nvim_set_hl(0, 'GitSignsChange', { fg = '#d29922', cterm = {} })
 vim.api.nvim_set_hl(0, 'GitSignsDelete', { fg = '#db403d', cterm = {} })
@@ -70,18 +82,6 @@ vim.api.nvim_set_hl(0, 'IlluminatedWordRead', { fg = 'NONE', bg = '#393c43' })
 vim.api.nvim_set_hl(0, 'IlluminatedWordWrite', { fg = 'NONE', bg = '#393c43' })
 vim.api.nvim_set_hl(0, 'FidgetTitle', { fg = '#1687bc', bg = 'NONE', bold = true, cterm = { bold = true } })
 vim.api.nvim_set_hl(0, 'FidgetTask', { fg = '#5c6370', bg = 'NONE', cterm = {} })
-vim.api.nvim_set_hl(0, 'DiagnosticError', { fg = '#ff3129' })
-vim.api.nvim_set_hl(0, 'DiagnosticWarn', { fg = '#fccd2c' })
-vim.api.nvim_set_hl(0, 'DiagnosticInfo', { fg = '#14b5ff' })
-vim.api.nvim_set_hl(0, 'DiagnosticHint', { fg = '#72b847' })
-vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextError', { fg = '#ff3129', bg = '#3c1e20', italic = true, cterm = { italic = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextWarn', { fg = '#fccd2c', bg = '#3c3621', italic = true, cterm = { italic = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextInfo', { fg = '#14b5ff', bg = '#193241', italic = true, cterm = { italic = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticVirtualTextHint', { fg = '#72b847', bg = '#273325', italic = true, cterm = { italic = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineError', { sp = '#ff3129', undercurl = true, cterm = { undercurl = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineWarn', { sp = '#fccd2c', undercurl = true, cterm = { undercurl = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineInfo', { sp = '#14b5ff', undercurl = true, cterm = { undercurl = true } })
-vim.api.nvim_set_hl(0, 'DiagnosticUnderlineHint', { sp = '#72b847', undercurl = true, cterm = { undercurl = true } })
 vim.api.nvim_set_hl(0, 'diffAdded', { fg = '#3db34d', cterm = {} })
 vim.api.nvim_set_hl(0, 'diffRemoved', { fg = '#db403d', cterm = {} })
 vim.api.nvim_set_hl(0, 'diffChanged', { fg = '#d29922', cterm = {} })
@@ -199,4 +199,9 @@ vim.api.nvim_set_hl(0, '@text.diff.add', { fg = '#3db34d', cterm = {} })
 vim.api.nvim_set_hl(0, '@text.diff.delete', { fg = '#db403d', cterm = {} })
 vim.api.nvim_set_hl(0, '@tag', { fg = '#379df1' })
 vim.api.nvim_set_hl(0, '@tag.delimiter', { fg = '#5c6370' })
+vim.api.nvim_set_hl(0, '@lsp.type.class', { fg = '#4bbe75' })
+vim.api.nvim_set_hl(0, '@lsp.type.type', { fg = '#4bbe75' })
+vim.api.nvim_set_hl(0, '@lsp.type.struct', { fg = '#4bbe75' })
+vim.api.nvim_set_hl(0, '@lsp.type.enum', { fg = '#4bbe75' })
+vim.api.nvim_set_hl(0, '@lsp.type.namespace', { fg = '#edeef2', bg = '#1a1b1f', cterm = {} })
 -- Built with Sccg 0.2.1
