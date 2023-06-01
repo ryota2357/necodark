@@ -10,7 +10,7 @@ var builder = new Builder
     {
         ThemeName = "necodark",
         Author = "ryota2357",
-        Version = "0.1.1",
+        Version = "0.1.2",
         License = "MIT",
         Repository = "https://github.com/ryota2357/necodark.git",
         Context = new MetadataContext
