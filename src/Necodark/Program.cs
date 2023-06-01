@@ -32,6 +32,7 @@ builder.Use<NeovimLspDiagnosticHighlight>();
 builder.Use<NeovimPluginHighlight>();
 builder.Use<VSCodeEditorHightlight>();
 builder.Use<TextMateHighlight>();
+builder.Use<LspSemanticTokensHighlight>();
 
 // formatter
 builder.Use<VimFormatter>();
