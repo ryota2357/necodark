@@ -1,9 +1,9 @@
 " Name:        necodark
-" Version:     0.1.1
+" Version:     0.1.2
 " Author:      ryota2357
 " License:     MIT
 " Repository:  https://github.com/ryota2357/necodark.git
-" Last change: 2023-05-12 Friday
+" Last change: 2023-06-01 Thursday
 set background=dark
 highlight clear
 if exists('syntax_on')
