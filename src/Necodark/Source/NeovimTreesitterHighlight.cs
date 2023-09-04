@@ -22,8 +22,8 @@ public class NeovimTreesitterHighlight : NeovimTreesitterHighlightSource
         Link(Group.Operator, VimSyntax.Operator);
 
         // Punctuation
-        Set(Group.PunctuationDelimiter, S.NormalText);
-        Set(Group.PunctuationBracket, S.NormalText);
+        Set(Group.PunctuationDelimiter, fg: S.NormalText.Foreground, bg: Color.None);
+        Set(Group.PunctuationBracket, fg: S.NormalText.Foreground, bg: Color.None);
         Set(Group.PunctuationSpecial, S.OperatorSilver);
 
         // Literals
