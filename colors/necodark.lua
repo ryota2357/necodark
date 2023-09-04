@@ -1,9 +1,9 @@
 -- Name:        necodark
--- Version:     0.1.2
+-- Version:     0.1.3
 -- Author:      ryota2357
 -- License:     MIT
 -- Repository:  https://github.com/ryota2357/necodark.git
--- Last change: 2023-06-01 Thursday
+-- Last change: 2023-09-04 Monday
 vim.cmd [[
   set background=dark
   highlight clear
@@ -143,8 +143,8 @@ vim.api.nvim_set_hl(0, '@none', { fg = 'NONE', bg = 'NONE', sp = 'NONE', cterm =
 vim.api.nvim_set_hl(0, '@preproc', { link = 'PreProc' })
 vim.api.nvim_set_hl(0, '@define', { link = 'Define' })
 vim.api.nvim_set_hl(0, '@operator', { link = 'Operator' })
-vim.api.nvim_set_hl(0, '@punctuation.delimiter', { fg = '#edeef2', bg = '#1a1b1f', cterm = {} })
-vim.api.nvim_set_hl(0, '@punctuation.bracket', { fg = '#edeef2', bg = '#1a1b1f', cterm = {} })
+vim.api.nvim_set_hl(0, '@punctuation.delimiter', { fg = '#edeef2', bg = 'NONE' })
+vim.api.nvim_set_hl(0, '@punctuation.bracket', { fg = '#edeef2', bg = 'NONE' })
 vim.api.nvim_set_hl(0, '@punctuation.special', { fg = '#cdd3d6' })
 vim.api.nvim_set_hl(0, '@string', { fg = '#e88e73' })
 vim.api.nvim_set_hl(0, '@character', { fg = '#e88e73' })
